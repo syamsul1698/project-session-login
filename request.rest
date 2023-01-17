@@ -1,0 +1,68 @@
+//GET ALL USER
+GET http://localhost:5000/users
+
+
+###
+GET http://localhost:5000/users/d77d8f44-13f2-4dc5-a368-14df0eadfe04
+
+###
+
+//Create User
+POST http://localhost:5000/users 
+Content-Type: application/json
+
+{
+    "nama": "Syamsul",
+    "email": "syam@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+
+###
+//update user
+PATCH  http://localhost:5000/users/d77d8f44-13f2-4dc5-a368-14df0eadfe04  
+Content-Type: application/json
+
+{
+    "nama": "Syamsul12 UPADET",
+    "email": "syam@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+//delete user
+DELETE  http://localhost:5000/users/d77d8f44-13f2-4dc5-a368-14df0eadfe04
+
+###
+//login
+POST http://localhost:5000/login 
+Content-Type: application/json
+
+{
+   
+    "email": "admin@gmail.com",
+    "password": "123456" 
+    
+}
+
+###
+POST http://localhost:5000/login 
+Content-Type: application/json
+
+{
+   
+    "email": "syam@gmail.com",
+    "password": "123456" 
+    
+}
+
+###
+//me
+GET http://localhost:5000/me
+
+###
+DELETE  http://localhost:5000/logout
